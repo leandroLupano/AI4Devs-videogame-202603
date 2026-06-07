@@ -105,7 +105,12 @@ Each level offers a safe low road (fewer collectibles, easier) and a riskier upp
 ## Testing Notes
 
 ### How to Run
-Open `wonder-boy-LL/index.html` directly in Chrome (no server required).
+This game uses ES Modules and requires a local HTTP server — opening `index.html` directly via `file://` will fail with a CORS error.
+
+Options:
+- **VS Code Live Server**: right-click `index.html` → *Open with Live Server* (recommended).
+- **Python**: run `python -m http.server 8080` from the `wonder-boy-LL/` directory, then open `http://localhost:8080` in Chrome.
+- **Node.js**: run `npx serve .` from the `wonder-boy-LL/` directory, then open the URL shown in the terminal.
 
 ### Checklist
 - [ ] No console errors on load.
